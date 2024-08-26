@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --main-font-family: "Nunito", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: var(--main-font-family);
+  transition: all 0.3s ease-in;
+}
+
+h1 {
+  background-color: #081b31;
+  color: #fff;
+  height: 5rem;
+  line-height: 5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #081b31;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  gap: 5rem;
+}
+
+#user-score, #comp-score {
+  font-size: 4rem;
+}
+
+.msg-container {
+  margin-top: 5rem;
+}
+
+#msg {
+  background-color: #081b31;
+  color: #fff;
+  display: inline;
+  padding: 1rem;
+  border-radius:2px;
+  font-weight: 600;
+  font-size: 4vmin;
+}
+
+/* Media Queries */
+
+/* For mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    h1{
+        font-size: 7.5vmin;
+    }
+  .choices {
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .choice {
+    height: 120px;
+    width: 120px;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+  }
+  .score-board {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #user-score, #comp-score {
+    font-size: 3rem;
+  }
+  .msg-container {
+    margin-top: 3rem;
+  }
+}
+
+/* For tablet devices (max-width: 768px) */
+@media only screen and (max-width: 800px) {
+  .choices {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .choice {
+    height: 140px;
+    width: 140px;
+  }
+  img {
+    height: 120px;
+    width: 120px;
+  }
+  .score-board {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  #user-score, #comp-score {
+    font-size: 3.5rem;
+  }
+  .msg-container {
+    margin-top: 4rem;
+  }
+  #msg {
+    font-size: 5vmin;
+  }
+}
+
+/* For desktop devices (min-width: 1024px) */
+@media only screen and (min-width: 1024px) {
+  .choices {
+    gap: 4rem;
+  }
+  .choice {
+    height: 180px;
+    width: 180px;
+  }
+  img {
+    height: 160px;
+    width: 160px;
+  }
+  .score-board {
+    gap: 5rem;
+  }
+  #user-score, #comp-score {
+    font-size: 5rem;
+  }
+  .msg-container {
+    margin-top: 6rem;
+  }
+}
